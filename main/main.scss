@@ -1,0 +1,85 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: auto;
+    padding-bottom: 5rem;
+    padding-top: 1rem;
+    #imgContainer{
+        width: 27rem;
+        margin: auto;
+        img{
+            cursor: pointer;
+        }
+    }
+    #marqueeParent{
+        position: fixed;
+        bottom: 0px;
+        width: 100%;
+    }
+    
+}
+.parent{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    top: 2rem;
+    text-align: center;
+    #clear{
+        position: absolute;
+        transform: translate(28px,5px);
+        cursor: pointer;
+    }
+    form{
+        display: flex;
+        justify-content: center;
+    }
+    input{
+        padding: 6px 6px;
+        font-size: 1.1rem;
+        border: none;
+        outline: none;
+        background-color: rgba(128, 128, 128, 0.625);
+        border-bottom: 1px solid grey;
+
+
+    }
+    button{
+        font-size: 1.1rem;
+        padding: 6px 7px;
+        border: none;
+        background-color: brown;
+        color:white;
+        cursor: pointer;
+    } 
+    #oops{
+        display: none;
+    }
+
+    #resultContainer{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 6px;
+        margin-top: 1rem;
+        text-align: center;
+        
+        img{
+            height: 266px;
+            width: 398px;
+        }
+        
+    }
+    h1{
+        color: rgb(0, 0, 0);
+        display: none;
+    }
+    #showMore{
+        display: none;
+        margin: auto;
+        top: 2rem;
+        position: relative;
+    }
+}
