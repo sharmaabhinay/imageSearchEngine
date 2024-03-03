@@ -2,6 +2,9 @@ body{
     padding: 0;
     margin: 0;
 }
+*{
+    // border: 1px solid black;
+}
 .container{
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,9 +13,20 @@ body{
     padding-top: 1rem;
     #imgContainer{
         width: 27rem;
+        max-width: 100%;
         margin: auto;
+        @media (max-width : 400px){
+            width: 14rem;
+            height: auto;
+        }
         img{
             cursor: pointer;
+            max-width: 100%;
+            height: auto;
+            @media (max-width : 400px){
+                width: 14rem;
+                height: auto;
+            }
         }
     }
     #marqueeParent{
@@ -36,6 +50,7 @@ body{
     form{
         display: flex;
         justify-content: center;
+        max-width: 100%;
     }
     input{
         padding: 6px 6px;
@@ -65,10 +80,18 @@ body{
         grid-gap: 6px;
         margin-top: 1rem;
         text-align: center;
-        
+        @media (max-width : 840px){
+            grid-template-columns: auto auto;
+        }
         img{
-            height: 266px;
+            height: 250px;
+            max-height: 100%;
             width: 398px;
+            max-width: 100%;
+            @media (max-width : 540px){
+                width: 100%;
+                height: auto;
+            }
         }
         
     }

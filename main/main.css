@@ -12,10 +12,25 @@ body {
 }
 .container #imgContainer {
   width: 27rem;
+  max-width: 100%;
   margin: auto;
+}
+@media (max-width: 400px) {
+  .container #imgContainer {
+    width: 14rem;
+    height: auto;
+  }
 }
 .container #imgContainer img {
   cursor: pointer;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 400px) {
+  .container #imgContainer img {
+    width: 14rem;
+    height: auto;
+  }
 }
 .container #marqueeParent {
   position: fixed;
@@ -38,6 +53,7 @@ body {
 .parent form {
   display: flex;
   justify-content: center;
+  max-width: 100%;
 }
 .parent input {
   padding: 6px 6px;
@@ -65,9 +81,22 @@ body {
   margin-top: 1rem;
   text-align: center;
 }
+@media (max-width: 840px) {
+  .parent #resultContainer {
+    grid-template-columns: auto auto;
+  }
+}
 .parent #resultContainer img {
-  height: 266px;
+  height: 250px;
+  max-height: 100%;
   width: 398px;
+  max-width: 100%;
+}
+@media (max-width: 540px) {
+  .parent #resultContainer img {
+    width: 100%;
+    height: auto;
+  }
 }
 .parent h1 {
   color: rgb(0, 0, 0);

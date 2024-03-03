@@ -29,6 +29,15 @@ async function showImages() {
     }
 
     let prompt = input.value;
+    if(input.value == 0){
+        // let Errorimg = document.createElement('img');
+        // Errorimg.src = 'https://safesendsoftware.com/wp-content/uploads/2016/06/Human-Error.jpg';
+        // resultContainer.innerHTML = Errorimg;
+        document.getElementById('oops').style.display = 'block';
+        console.log('input is empty')
+    }else{
+        document.getElementById('oops').style.display = 'none';
+    }
     document.getElementById('loading').style.display = 'block';
     const url = `https://api.unsplash.com/search/photos?page=${page}&query=${prompt}&client_id=LVAbfjNCFOE873u-Nt1FqmBcduHKV5pibBHFhX4ykLQ&per_page=12`;
     
@@ -84,6 +93,7 @@ showMore.addEventListener('click',()=> {
 document.getElementById('clear').addEventListener('click',()=> {
     input.value = '';
     clearInput();
+    input.focus();
 
     
 })
