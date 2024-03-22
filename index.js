@@ -30,11 +30,8 @@ async function showImages() {
 
     let prompt = input.value;
     if(input.value == 0){
-        // let Errorimg = document.createElement('img');
-        // Errorimg.src = 'https://safesendsoftware.com/wp-content/uploads/2016/06/Human-Error.jpg';
-        // resultContainer.innerHTML = Errorimg;
         document.getElementById('oops').style.display = 'block';
-        console.log('input is empty')
+        alert('input is empty')
     }else{
         document.getElementById('oops').style.display = 'none';
     }
@@ -47,6 +44,8 @@ async function showImages() {
     let result = data.results;
     let oops;
     if (result.length == 0) {
+        resultContainer.innerHTML = '';
+        showMore.style.display = 'none';
         document.getElementById('oops').style.cssText = 'display:block;margin:auto;margin-top:1rem;';
     } else {
         document.getElementById('oops').style.display = 'none';
